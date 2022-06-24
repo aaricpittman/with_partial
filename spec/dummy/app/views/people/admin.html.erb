@@ -1,0 +1,7 @@
+<table>
+  <tbody>
+    <% @persons.each do |person| %>
+      <%= render person.with_context("admin").with_partial("table_row") %>
+    <% end %>
+  </tbody>
+</table>

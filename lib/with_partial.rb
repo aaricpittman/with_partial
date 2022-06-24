@@ -1,6 +1,9 @@
-require "with_partial/version"
-require "with_partial/engine"
+# frozen_string_literal: true
 
-module WithPartial
-  # Your code goes here...
-end
+require 'action_view'
+
+require 'with_partial/version'
+require 'with_partial/decorator'
+require 'with_partial/conversions'
+
+ActionView::Base.include(WithPartial::Conversions)
